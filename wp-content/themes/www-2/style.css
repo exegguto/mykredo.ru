@@ -1,0 +1,269 @@
+/*
+Theme Name: temp
+Theme URI: домашняя-страница-темы
+Description: краткое-описание-темы
+Author: ваше-имя
+Author URI: ваш-URI
+Version: номер-версии--необязательное-поле
+.
+Развёрнутое описание темы/Лицензия-если-нужно.
+.
+*/
+
+@import url('bootstrap/css/bootstrap.min.css'); 
+@import url('bootstrap/css/rangeslider.css'); 
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&subset=latin,cyrillic);
+
+@font-face {
+	font-family: 'museo_sans_cyrl100';
+	src: url('fonts/museosanscyrl_100-webfont.eot');
+	src: url('fonts/museosanscyrl_100-webfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/museosanscyrl_100-webfont.woff2') format('woff2'),
+		url('fonts/museosanscyrl_100-webfont.woff') format('woff'),
+		url('fonts/museosanscyrl_100-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'museo_sans_cyrl300';
+    src: url('fonts/museosanscyrl_300-webfont.eot');
+    src: url('fonts/museosanscyrl_300-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosanscyrl_300-webfont.woff2') format('woff2'),
+         url('fonts/museosanscyrl_300-webfont.woff') format('woff'),
+         url('fonts/museosanscyrl_300-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'museo_sans_cyrl500';
+    src: url('fonts/museosanscyrl_500-webfont.eot');
+    src: url('fonts/museosanscyrl_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosanscyrl_500-webfont.woff2') format('woff2'),
+         url('fonts/museosanscyrl_500-webfont.woff') format('woff'),
+         url('fonts/museosanscyrl_500-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'museo_sans_cyrl700';
+    src: url('fonts/museosanscyrl_700-webfont.eot');
+    src: url('fonts/museosanscyrl_700-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosanscyrl_700-webfont.woff2') format('woff2'),
+         url('fonts/museosanscyrl_700-webfont.woff') format('woff'),
+         url('fonts/museosanscyrl_700-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {font-family: 'ALS Rubl';font-style: normal;font-weight: normal;src: local('ALS Rubl'), url('fonts/rouble.woff') format('woff');}
+
+.h1, h1 {font-size: 48px;}
+.h2, h2 {font-size: 30px;}
+.h1, h1, .h2, h2 {margin-top: 25px;margin-bottom: 25px;}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {font-family: 'Roboto Slab', serif;font-weight: 700;}
+.f12 {font-size: 12px;}
+.f14 {font-size: 14px;line-height: 18px;}
+.f16 {font-size: 16px;}
+.f18 {font-size: 18px;}
+.f22 {font-size: 22px;}
+.text-success {color: #254c03;}
+.font-slab {font-family: 'Roboto Slab', serif;font-weight: 700;}
+
+.intro {min-height: 720px;color: #fff;}
+section {padding: 30px 0 0px;background: url('images/bg/pattern.png') center center;}
+/*Лого на главной*/
+.brandlogo {text-align: center;color: #fff;text-decoration: none;width: 200px;display: block;float: left;z-index:1003;}
+.brandlogo .logo {font-size: 38px;font-family: 'Roboto Slab', serif;font-weight: 700;margin-bottom: 0px;letter-spacing: 7px;position: relative;padding-left: 10px;}
+.brandlogo .descr {font-size: 13px;text-transform: uppercase;}
+.brandlogo .logo:after {content: '';width: 9px;height: 9px;background: #fff;border-radius: 50%;display: block;position: absolute;right: 0;margin-top: -28px;}
+.brandlogo .logo:before {content: '';width: 9px;height: 9px;background: #fff;border-radius: 50%;display: block;position: absolute;left: 0;margin-top: 24px;}
+.brandlogo:hover, .brandlogo:focus {color: #fff;text-decoration: none!important;}
+/*Список на главной*/
+.intro  .introhead {margin: 30px 0 40px;}
+.intro .list-checked li {padding-bottom: 10px;padding-left: 35px;position: relative;}
+.intro .list-checked li:before {content: '';width: 25px;height: 25px; background: url('images/check.png') no-repeat center center; position: absolute;left: 0;display: block;}
+.intro .intro_logo img{width:100%}
+/*Меню*/
+.navbar-default {background-color: #4fa800;border-color: #4fa800;min-height: 50px;margin-bottom: 0px; -webkit-transition: all 0.125s ease-in-out 0s;-moz-transition: all 0.125s ease-in-out 0s;-ms-transition: all 0.125s ease-in-out 0s;-o-transition: all 0.125s ease-in-out 0s;transition: all 0.125s ease-in-out 0s;}
+.navbar-default .navbar-brand {color: #254C03;padding-top: 20px;padding-left: 10px;position :relative;text-align: center;margin-right: 20px;margin-left: -15px;margin-bottom: 0px;font-size: 18px;font-family: 'Roboto Slab', serif;font-weight: 700;letter-spacing: 7px;}
+/*.navbar-default  .navbar-brand:after {content: '';width: 3px;height: 3px;background: #254C03;border-radius: 50%;display: block;position: absolute;right: 0;margin-top: -10px;margin-right: 10px;}
+.navbar-default  .navbar-brand:before {content: '';width: 3px;height: 3px;background: #254C03;border-radius: 50%;display: block;position: absolute;left: 0;margin-top: 10px;}*/
+.navbar-default .navbar-brand:focus , .navbar-default .navbar-brand:hover {color: #254C03;}
+.navbar-default .navbar-brand img{width:auto;height:50px;margin-top:-15px;}
+.navbar-collapse {float: left;}
+
+ul {margin-bottom: 0px;}
+.menu li {list-style-type: none;}
+.menu-item {padding: 0px 8px;padding-top: 20px;padding-bottom: 20px;color: #FFF;text-transform: uppercase;font-family: 'museo_sans_cyrl700'; float: left}
+.menu-item>a {color: #FFF;text-transform: uppercase;font-family: 'museo_sans_cyrl700';}
+.current-menu-item {color: #3B710C;background-color: transparent;}
+.menu-item>.active>a, .menu-item>.active>a:focus, .menu-item>.active>a:hover {color: #254c03;background-color: transparent;}
+
+header .affix {top: 0;z-index: 1002;width: 100%;
+-webkit-transition: all 0.125s ease-in-out 0s;
+-moz-transition: all 0.125s ease-in-out 0s;
+-ms-transition: all 0.125s ease-in-out 0s;
+-o-transition: all 0.125s ease-in-out 0s;
+transition: all 0.125s ease-in-out 0s;
+}
+
+.navbar .calc {background-color: #fff;float: right;display: block;position: relative;width: 220px;height: 61px;margin-bottom: -1px;text-align: center;padding: 10px;margin-right: -10px;margin-left: 30px;}
+.navbar .calc a {color: #4fa800;font-size: 14px;text-decoration: underline;text-transform: uppercase;font-family: 'museo_sans_cyrl700';}
+.navbar .calc img {margin-top: 0px;float: left;margin-left: 10px;}
+.navbar .phoneblock {float:right;color:#fff;font-size:18px;padding:5px;font-family:'museo_sans_cyrl700';text-align:right;height:60px;padding-top:6px;line-height: 24px;position:relative;}
+.navbar .phoneblock a{font-size: 14px;color: #fff;text-decoration: underline;}
+.navbar .phoneblock a.ph{font-size: 18px;color: #fff;text-decoration: none;}
+
+/*Почему мы*/
+.triggers .col-md-2 {width: 20%;}
+.triggers .round {background: #f89406;color: #fff;width: 200px;height: 200px;margin: 0 auto;border-radius: 50%;padding: 10px;margin-top: 50px;}
+.triggers .round .icon {width: 80px;height: 80px;background: #f3f3f3;margin: 0 auto;border-radius: 50%;padding: 10px;margin-top: -40px;}
+.triggers .round h5{margin-top: 20%;}
+
+/*Поможем успешно оформить*/
+.well {margin-bottom: 40px;background-color: #f1f1f1;border: 1px solid #f1f1f1;border-radius: 4px;-webkit-box-shadow:none;box-shadow: none;border-bottom: 2px solid #babcba;margin-right: 1%;padding: 10px;}
+.well h3 {margin-top:10px;font-size:18px;}
+.well p {color: #858585;}
+.headsection {margin-top: 20px;padding: 40px 0 40px;background: #4fa800;color: #fff;}
+.headsection h1{margin:0px;}
+.colon1 h3, .colon3 h3{height:80px;}
+.colon2 h3{height:60px;}
+.colon1 p{height:100px;}
+.colon2 p{height:100px;}
+.colon3 p{height:140px;}
+hr {margin:0px 0px 10px; border-top: 1px solid #4fa800;}
+
+/*соцсети*/
+.col-md-offset-custom {margin-left: 13.3%;}
+
+/*Карусель*/
+.carousel-control.right {background-image:none;margin-right: -40px;}
+.carousel-control.left {background-image:none;margin-left: -40px;}
+.carousel-control {top: 20%;}
+.carousel-indicators {bottom: -30px;}
+.carousel-indicators li {background-color: #dfdfdf;}
+.carousel-indicators .active{background-color: #4fa800;}
+.carousel {width: 80%;}
+.carousel p{height: 0;}
+/*адреса*/
+.intro .introhead .phone {font-size: 36px;font-family: 'museo_sans_cyrl700';margin-bottom: 0px;line-height: 40px;}
+.intro .introhead .phone a {color: #fff;text-decoration: none;}
+.intro .introhead .phone a:hover {color: #fff;text-decoration: none;}
+.intro .introhead .adress {font-size: 12px;}
+/*Ширина карты*/
+iframe {width: 100%;}
+/*плавающее окно*/
+.panel {-webkit-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.6);-moz-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.6);box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.6);z-index:1002;width: 20%;}
+.panel-success {border-color: #4FA800;}
+.panel-body {padding: 30px;color: #000000;}
+.panelthis .affix{bottom:10%;right: 5%;}
+.form-control {height: 46px;font-family: 'Roboto', sans-serif;font-style: italic;border-radius: 2px;}
+footer .foot {background: #000;color: #fff;padding: 40px 0 10px;}
+
+
+/* Базовые стили модального окна  */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    cursor: default;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    z-index: 1004;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+}
+.overlay:target {visibility: visible;opacity: 1;}
+.popup img{
+	display: inline;
+	border: none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background: #ffffff;	
+}
+.popup {
+ 	background-color: #fff;
+ 	box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.6);
+	border: 3px solid #4FA800;
+	display: inline-block;
+	left: 50%;
+ 	opacity: 0;
+ 	padding: 10px;
+ 	position: fixed;
+ 	font: 14px Helvetica, Arial, Sans-Serif;
+	top: 40%;
+ 	visibility: hidden;
+	z-index: 1005;
+ 
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+ 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+ 
+    -webkit-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -moz-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -ms-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -o-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+ 
+    -webkit-transition: opacity .5s, top .5s;
+    -moz-transition: opacity .5s, top .5s;
+    -ms-transition: opacity .5s, top .5s;
+    -o-transition: opacity .5s, top .5s;
+    transition: opacity .5s, top .5s;
+}
+.overlay:target+.popup {
+    top: 50%;
+    opacity: 1;
+    visibility: visible;
+}
+/* Кнопка закрытия окна  */
+.close {
+  	box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.6);
+	border: 3px solid #4FA800;
+    height: 30px;
+    line-height: 24px;
+    position: absolute;
+    right: 0px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    top: 0px;
+    width: 30px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+     border-radius: 15px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    font-size: 14px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.close:hover {background-color: rgba(64, 128, 128, 0.8);}
+.popup p, .popup div {margin-bottom: 10px;}
+
+/*Калькулятор*/
+.m-t-10 {margin-top: 10px!important;}
+.m-b-20 {margin-bottom: 20px!important;}
+.rub {font-family: 'ALS Rubl';font-weight: normal;text-transform: none;}
+
